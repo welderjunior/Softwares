@@ -1,0 +1,13 @@
+CRIA BOT NO TELEGRAM
+
+1 - Acesse o chat @botfather
+2 - /start
+3 - /newbot
+4 - digite o nome do bot ex: AlertasZabbix
+5 - digite um @ para o bot ex: AlertasZabbix_bot
+6 - copie o token de acesso
+7 - mande um /start e uma mensagem para o bot
+8 - crie um grupo
+9 - adicione o bot e o @myidbot
+10 - /getgroupid@myidbot
+11 - /start@AlertasZabbix_bot
