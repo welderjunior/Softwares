@@ -1,0 +1,74 @@
+ATUALIXAR LINUX
+
+apt update
+apt upgrade
+
+INSTALAR O APACHE
+
+apt install apache2 apache2-utils
+
+systemctl status apache2
+
+hostname -I
+
+a2enmod rewrite
+a2enmod headers
+
+ou
+
+ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
+/etc/init.d/apache2 restart
+
+systemctl restart apache2
+
+INSTALAR PACOTES DO APACHE
+
+apt install libapache2-mod-php php php-mysql php-mbstring php-gd php-curl php-pear
+
+INSTALAR BANCO DE DADOS MARIADB
+
+apt install mariadb-server mariadb-client
+
+ACESSAR MARIADB: mariadb -p
+senha: enter com user root
+
+CREATE DATABASE phpipam;
+
+GRANT ALL PRIVILEGES ON phpipam.* TO 'admin'@'localhost' IDENTIFIED BY 'senha';
+
+FLUSH PRIVILEGES
+
+INSTALAR PHPIPAM, ACESSANDO SITE DO GITHUB
+
+https://github.com/phpipam/phpipam/releases
+
+cd /tmp/
+wget linl com versão do phpipam
+
+EXTRAIR ARQUIVO
+
+tar vxf 'nome do arquivo'
+mv phpipam /var/www/html/phpipam
+cd /var/www/html/phpipam
+cp config.dist.php config.php
+nano config.php
+
+MUDAR USER E PASSWORD
+
+MUDAR 
+
+if(!defined('BASE'))
+define('BASE', "/");
+
+PARA
+
+if(!defined('BASE'))
+define('BASE', "/phpipam");
+
+apt install php-gmp
+
+systemctl restart apache2
+
+
+
+
